@@ -21,7 +21,7 @@ public class Ejercicio2 {
         radio = Double.parseDouble(input.nextLine());
         areaTotal = Mates.area(radio);
         longitudTotal = Mates.longitud(radio);
-        System.out.printf("El area total del circulo es %.2f cm2 por ejemplo, y la longitud es de %.2f cm por ejemplo también", areaTotal, longitudTotal);
+        System.out.printf("El area total del circulo es %.2f cm2 por ejemplo, y la longitud es de %.2f cm por ejemplo también\n", areaTotal, longitudTotal);
 
     }
 }
