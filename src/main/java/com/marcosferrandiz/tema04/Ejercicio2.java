@@ -1,5 +1,7 @@
 package com.marcosferrandiz.tema04;
 
+import com.marcosferrandiz.tema04.libreria.IO;
+
 import java.util.Scanner;
 
 public class Ejercicio2 {
@@ -18,10 +20,16 @@ public class Ejercicio2 {
         double longitudTotal;
         Scanner input = new Scanner(System.in);
         System.out.println("Indique el radio para calcular el area y la longitud");
+
+        input.close();
+
         radio = Double.parseDouble(input.nextLine());
         areaTotal = Mates.area(radio);
         longitudTotal = Mates.longitud(radio);
         System.out.printf("El area total del circulo es %.2f cm2 por ejemplo, y la longitud es de %.2f cm por ejemplo también\n", areaTotal, longitudTotal);
+
+
+
 
     }
 }
