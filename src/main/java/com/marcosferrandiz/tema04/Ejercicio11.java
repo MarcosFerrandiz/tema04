@@ -7,12 +7,23 @@ import java.util.Scanner;
 
 public class Ejercicio11 {
 
+    /**
+     * Crea un número aleatorio entre los seleccionados anteriormente
+     * @param golesMin La cantidad de goles minimos (El numero minimo de el Random)
+     * @param golesMax La cantidad de goles maximos (El numero maximos de el Random)
+     * @return Devuelve el número del random
+     */
     public static int golesAleatorios(int golesMin, int golesMax){
         Random rng = new Random();
         int goles = rng.nextInt(golesMin,golesMax);
         return goles;
     }
 
+    /**
+     * Muestra el resultado del partido como 1, X o 2 dependiendo de quien haya ganado
+     * @param golesMin La cantidad de goles minimos (El numero minimo de el Random)
+     * @param golesMax La cantidad de goles maximos (El numero maximos de el Random)
+     */
     public static void quinela(int golesMin, int golesMax){
         int partido = 1;
         do {

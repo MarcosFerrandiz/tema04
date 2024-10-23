@@ -6,6 +6,14 @@ import java.util.Scanner;
 
 public class Ejercicio8 {
 
+    /**
+     * Valida que el número introducido de 4 digitos sea capicua
+     * @param n1 El primer número del número de 4 digitos
+     * @param n2 El segundo número del número de 4 digitos
+     * @param n3 El tercero número del número de 4 digitos
+     * @param n4 El cuarto número del número de 4 digitos
+     * @return Devuelve un booleano de si es o no es capicua
+     */
     public static boolean esCapicua4Numeros(int n1, int n2, int n3, int n4){
         boolean valido = n1 == n4 && n2 == n3;
         return valido;

@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Ejercicio10 {
 
+    /**
+     * Crea y muestra la tabla de multiplicar hasta el 10 del número insertado por el usuario
+     * @param num Es el número insertado por el usuario el cual quiere saber su tabla de multiplicar
+     */
     public static void tablaMulti(int num){
         for (int i = 1; i <= 10; i++){
             int resultado = num * i;
