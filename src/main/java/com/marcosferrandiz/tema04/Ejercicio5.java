@@ -12,7 +12,24 @@ public class Ejercicio5 {
         for (int i = 0; numVeces > i; i++){
             System.out.print(letra);
         }
+
     }
+/*
+   BIEN
+    public static String imprimirCaracterXVecesConString(char letra, int numVeces){
+
+        if (numVeces <= 0){
+            return null;
+        }
+        String resultado = "";
+        for (int i = 0; numVeces > i; i++){
+            resultado += letra;
+        }
+        return resultado;
+        }
+         */
+
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Indique la letra que quiera");
@@ -23,5 +40,16 @@ public class Ejercicio5 {
         input.close();
 
         imprimirCaracterXVeces(caracter, numeroVeces);
+
+        /*
+        BIEN
+        String texto = imprimirCaracterXVecesConString( 'B',5);
+       if (texto == null){
+           System.err.println("Debes indicar un número positivo");
+       } else {
+           System.out.println(texto);
+       }
+        */
+
     }
 }

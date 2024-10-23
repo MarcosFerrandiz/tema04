@@ -17,6 +17,33 @@ public class Ejecicio6 {
             System.out.println(letra);
         }
     }
+
+    /*
+    BIEN
+    public static String repetir(char letra, int numVeces){
+
+        if (numVeces <= 0){
+            return null;
+        }
+        String resultado = "";
+        for (int i = 0; numVeces > i; i++){
+            resultado += letra;
+        }
+        return resultado;
+    }
+
+    public static String repetir(char caracter, int fila, int columna){
+        String resultado = "";
+        for (int i = 1; i <= fila; i++){
+            resultado += repetir(caracter,columna) + "\n";
+        }
+        return resultado;
+    }
+     */
+
+
+
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Indique la letra que quiera");
@@ -29,5 +56,17 @@ public class Ejecicio6 {
         input.close();
 
         imprimirCaracterXVeces(caracter, alto, largo);
+
+
+
+        /*
+        BIEN
+         String texto = repetir( 'B',5,4);
+       if (texto == null){
+           System.err.println("Debes indicar un número positivo");
+       } else {
+           System.out.println(texto);
+       }
+         */
     }
 }
