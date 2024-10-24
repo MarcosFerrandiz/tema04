@@ -6,6 +6,11 @@ import java.util.Random;
 
 public class Ejercicio12 {
 
+    /**
+     * Crea un numero aleatorio, lo repite X veces y el resultado lo guarda en un string
+     * @param notas Es el valor introducido
+     * @return Devuelve un string con el resultado
+     */
     public static String genNota(int notas){
         Random rng = new Random();
         String finalRes = "";
@@ -18,7 +23,11 @@ public class Ejercicio12 {
         return finalRes;
     }
 
-
+    /**
+     * Saca un enumerado de nota dependiendo de la nota introducida
+     * @param nota Es la nota introducida
+     * @return Devuelve el resultado del enumerado
+     */
     public static Calificaciones calificacionAlfabetica(int nota){
         Calificaciones notas;
         if (nota < 5){
