@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio14 {
     /**
-     * Calcula el combinatorio de los numeros introducidos
+     * Calcula el combinatorio de los números introducidos
      * @param n El primer número que introducimos
      * @param m El segundo numero que introducimos
      * @return Devuelve el resultado del calculo combinatorio
