@@ -6,6 +6,15 @@ import java.util.Scanner;
 public class Ejercicio15 {
 
     /**
+     * Variable de las porras del jugador
+     */
+    public static int porraJugador = 0;
+    /**
+     * Variable de las porras del crupier
+     */
+    public static int porraCrupier = 0;
+
+    /**
      * Hace un random del 1 al 7, es decir 6 numeros como si fuera un dado
      * @return Devuelve el resultado del random, es decir, el resultado del dado
      */
@@ -14,11 +23,9 @@ public class Ejercicio15 {
         return rng.nextInt(1,7);
     }
 
-    public static String ronda(){
+    public static void ronda(){
         int ptsJugador = jugarJugarJugarJugarJugador();
         int ptsMax = 11;
-        int porraCrupier = 0;
-        int porraJugador = 0;
         if (ptsJugador >ptsMax){
             System.out.println("Te has pasado de puntos, por lo que el crupier gana");
             porraCrupier++;
@@ -41,8 +48,6 @@ public class Ejercicio15 {
                 porraCrupier++;
             }
         }
-        String resultado = ""+ porraJugador + porraCrupier;
-        return resultado;
     }
 
 
@@ -61,14 +66,14 @@ public class Ejercicio15 {
     public static String deciJugador(){
         Scanner input = new Scanner(System.in);
         String deci = "";
-        boolean check = true;
-        while (check){
+        boolean siempre = true;
+        while (siempre){
             System.out.print("¿Deseas lanzar de nuevo? (s/n): ");
             deci = input.nextLine();
             if (deci.equals("s") || deci.equals("n")){
                 break;
             }else {
-                System.out.println("Valor equivocado, deberá de ingresar s para si o n para no");
+                System.out.println("Solo puede ingresar s para si o n para no");
             }
         }
         return deci;
@@ -81,7 +86,7 @@ public class Ejercicio15 {
         do {
             int resDado = rngDado();
             pts += resDado;
-            System.out.println("Has sacado un " + resDado+"por lo que actualmente tienes "+ pts );
+            System.out.println("Has sacado un " + resDado+" por lo que actualmente tienes "+ pts );
             if (pts >= 11){
                 break;
             }
@@ -95,10 +100,9 @@ public class Ejercicio15 {
     public static void main(String[] args) {
         System.out.println("Bienvenido al BLACKJACK del casino de las estafas, el primero en ganar 5 porras le deberá 100€ al casino");
         int maxPorra = 5;
-        int porraJugador = ronda().charAt(0);
-        int porraCrupier = ronda().charAt(1);
         while (porraJugador < maxPorra && porraCrupier < maxPorra){
             System.out.println("-----------------------------------");
+            ronda();
             System.out.println("Porras del Jugador: "+porraJugador+"| Porras Crupier: "+ porraCrupier);
         }
         if (porraJugador==maxPorra){
@@ -108,4 +112,5 @@ public class Ejercicio15 {
             System.out.println("El crupier ha ganado, que malo que eres o que mala suerte, no se");
         }
     }
+
 }
