@@ -23,7 +23,7 @@ public class Main {
         }
         return resultado;
          */
-
+/*
     public static String repetir(char letra, int numVeces){
 
         if (numVeces <= 0){
@@ -63,9 +63,5 @@ public class Main {
 
         //String nombre = IO.solicitarString("Escriba su nombre", 2, 30);
         //Integer edad = IO.solicitarEntero("Escriba su edad", 0, 100);
-
-
-
-
-    }
+*/
 }
