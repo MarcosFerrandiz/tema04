@@ -23,6 +23,9 @@ public class Ejercicio15 {
         return rng.nextInt(1,7);
     }
 
+    /**
+     * Hace el proceso de comparación de puntos de la ronda para saber quien ha ganado
+     */
     public static void ronda(){
         int ptsJugador = jugarJugarJugarJugarJugador();
         int ptsMax = 11;
@@ -51,6 +54,11 @@ public class Ejercicio15 {
     }
 
 
+    /**
+     * Hacee el turno del crupier y lo compara con los puntos del jugador
+     * @param ptsJugador Resultado de los puntos del jugado
+     * @return Devuelve los puntos del crupier
+     */
     public static int jugarCrupier(int ptsJugador){
         int pts = 0;
         int maxPts = 11;
@@ -63,6 +71,10 @@ public class Ejercicio15 {
     }
 
 
+    /**
+     * Muestra un mensaje para preguntar si quieres lanzar de nuevo el dado
+     * @return Devuelve la decision tomada por el jugador
+     */
     public static String deciJugador(){
         Scanner input = new Scanner(System.in);
         String deci = "";
@@ -80,6 +92,10 @@ public class Ejercicio15 {
     }
 
 
+    /**
+     * Hace el proceso de decisiones y de de mostrar el total de numeros que tienes y los que has sacado
+     * @return Devuelve la cantidad de puntos del jugador
+     */
     public static int jugarJugarJugarJugarJugador(){
         int pts = 0;
         String deci;
