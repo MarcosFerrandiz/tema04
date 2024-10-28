@@ -11,12 +11,12 @@ public class Ejercicio12 {
      * @param notas Es el valor introducido
      * @return Devuelve un string con el resultado
      */
-    public static String genNota(int notas){
+    public static String genNota(float notas){
         Random rng = new Random();
         String finalRes = "";
         Calificaciones resultado;
         for (int i = 0; i <= 50;i++){
-            int calificacion = rng.nextInt(0,11);
+            float calificacion = rng.nextInt(0,11);
             resultado = calificacionAlfabetica(calificacion);
             finalRes += resultado + "\n";
         }
@@ -28,7 +28,7 @@ public class Ejercicio12 {
      * @param nota Es la nota introducida
      * @return Devuelve el resultado del enumerado
      */
-    public static Calificaciones calificacionAlfabetica(int nota){
+    public static Calificaciones calificacionAlfabetica(float nota){
         Calificaciones notas;
         if (nota < 5){
             notas = Calificaciones.INSUFICIENTE;
