@@ -11,11 +11,21 @@ public class Ejercicio3 {
         MERCURIO, VENUS, TIERRA, MARTE, JUPITER, SATURNO, URANO, NEPTUNO
     }
 
+    /**
+     * Calcula tu fecha de nacimiento y la pasa a dias
+     * @param fechaNacimiento Fecha de nacimiento
+     * @return Devuelve la cantidad de dias en los que llevas vivo
+     */
     public static long calcularEdadAlienigena(LocalDate fechaNacimiento){
         LocalDate hoy = LocalDate.now();
         return ChronoUnit.DAYS.between(fechaNacimiento, hoy);
     }
 
+    /**
+     * Saca la cantidad de dias que tarda en dar la vuelta al sol el planeta elegido
+     * @param planeta Es el planeta que hemos elegido sacado del enum
+     * @return Devuelve la cantidad de dias del planeta
+     */
     public static double dias(Planeta planeta){
         double diasVueltaAlSol;
         diasVueltaAlSol = switch (planeta){
