@@ -11,6 +11,11 @@ public class Ejercicio4 {
         ACUARIO, PISCIS, ARIES, TAURO, GEMINIS, CANCER, LEO, VIRGO, LIBRA, ESCORPIO, OFLUCO, SAGITARIO, CAPRICORNIO
     }
 
+    /**
+     * Coge la fecha de nacimiento introducida y la
+     * @param fechaNac Es la fecha de nacimiento introducida por el usuario
+     * @return Devuelve el signo del zodiaco adecuado a la fecha indicada
+     */
     public static String saberSigno (LocalDate fechaNac){
         MonthDay fechaNacimiento = MonthDay.of(fechaNac.getMonth(), fechaNac.getDayOfMonth());
         String signo;
