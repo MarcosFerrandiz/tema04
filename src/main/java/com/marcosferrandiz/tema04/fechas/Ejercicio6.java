@@ -23,7 +23,8 @@ public class Ejercicio6 {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         DateTimeFormatter dateTimeFormatter2 = DateTimeFormatter.ofPattern("dd/MM HH:mm:ss");
         LocalDateTime ahora = LocalDateTime.now();
-        System.out.println(ahora);
+        String diaActual = ahora.format(dateTimeFormatter);
+        System.out.println("Hoy estamos a "+ diaActual);
 
         int diaHoy = ahora.getDayOfMonth();
         int mesHoy = ahora.getMonthValue();
@@ -45,9 +46,9 @@ public class Ejercicio6 {
         int min = minHoy - minNewYear;
         int sec = secHoy - secNewYear;
 
-        LocalDateTime s = ChronoUnit.SECONDS.addTo(anoNuevo, -sec -1);
-        LocalDateTime m = ChronoUnit.MINUTES.addTo(s, -min -1);
-        LocalDateTime h = ChronoUnit.HOURS.addTo(m, -hora -1);
+        LocalDateTime s = ChronoUnit.SECONDS.addTo(anoNuevo, -sec);
+        LocalDateTime m = ChronoUnit.MINUTES.addTo(s, -min);
+        LocalDateTime h = ChronoUnit.HOURS.addTo(m, -hora);
         LocalDateTime d = ChronoUnit.DAYS.addTo(h, -dia -1);
         LocalDateTime me = ChronoUnit.MONTHS.addTo(d, -mes -1);
 
@@ -60,7 +61,7 @@ public class Ejercicio6 {
                 i = cuenta(a,i);
                 LocalDateTime queda = ChronoUnit.SECONDS.addTo(me, -i);
                 String fechaFormateada = queda.format(dateTimeFormatter2);
-                System.out.println(fechaFormateada);
+                System.out.println("Faltan "+fechaFormateada+ " para año nuevo, yupi!!!");
             }
         }, 0, 1000);
 

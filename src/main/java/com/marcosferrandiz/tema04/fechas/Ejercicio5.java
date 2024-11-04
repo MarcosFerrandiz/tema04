@@ -8,14 +8,14 @@ import java.util.Scanner;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Introduce la fecha del lanzamiento en formato dd/MM/yyyy");
-        String fechaSalida = scanner.nextLine();
+        String fechaSalida = input.nextLine();
         System.out.println("Introduce la hora del lanzamiento en formato HH:mm:ss");
-        String horaSalida = scanner.nextLine();
+        String horaSalida = input.nextLine();
         System.out.println("Introduzca la velocidad que tiene el cohete en km/h");
-        float vel = Float.parseFloat(scanner.nextLine());
-        scanner.close();
+        float vel = Float.parseFloat(input.nextLine());
+        input.close();
 
         String fechaHora = fechaSalida + " " + horaSalida;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
