@@ -7,6 +7,12 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Ejercicio6 {
+    /**
+     * Va sumando un valor a + un valor b, y luego devuelve a
+     * @param a Primer valor introducido
+     * @param b Segundo valor introducido
+     * @return Devuelve la suma de ambos
+     */
     public static int cuenta(int a,int b){
         a = a + b;
         return a;
