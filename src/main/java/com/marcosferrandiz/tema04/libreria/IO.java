@@ -11,29 +11,28 @@ public class IO {
      * @return El texto leido valido
      */
     public static String solicitarString(String mensaje, int longitudMinima, int longitudMaxima){
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         boolean valido;
         String resultado;
         do {
             System.out.println(mensaje);
-            resultado = input.nextLine();
+            resultado = scanner.nextLine();
             valido = resultado.length() >= longitudMinima && resultado.length() <= longitudMaxima;
             if (!valido) {
                 System.err.printf("La longitud no es correcta, deberá de estar entre %d - %d\n",longitudMinima,longitudMaxima);
             }
         }while (!valido);
-        input.close();
         return resultado;
     }
 
     public static Integer solicitarEntero(String mensaje, int numMin, int numMax){
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         boolean valido;
         int num;
 
         do {
             System.out.println(mensaje);
-            num = Integer.parseInt(input.nextLine());
+            num = Integer.parseInt(scanner.nextLine());
             valido = num >= numMin && num <= numMax;
 
             if (!valido){
@@ -41,7 +40,6 @@ public class IO {
             }
 
         }while (!valido);
-        input.close();
         return num;
 
 
