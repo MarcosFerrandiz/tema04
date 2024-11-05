@@ -1,5 +1,6 @@
 package com.marcosferrandiz.tema04.fechas;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -32,7 +33,7 @@ public class Ejercicio6 {
         int minHoy = ahora.getMinute();
         int secHoy = ahora.getSecond();
 
-        LocalDateTime anoNuevo = LocalDateTime.parse("01/01/2025 00:00:00", dateTimeFormatter);
+        LocalDateTime anoNuevo = LocalDateTime.of(ahora.getYear(), 12, 31, 23, 59, 59);
 
         int diaNewYear = anoNuevo.getDayOfMonth();
         int mesNewYear = anoNuevo.getMonthValue();
@@ -64,6 +65,7 @@ public class Ejercicio6 {
                 System.out.println("Faltan "+fechaFormateada+ " para año nuevo, yupi!!!");
             }
         }, 0, 1000);
+
 
     }
 }
